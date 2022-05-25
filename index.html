@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      html,
+      body {
+        background-color: rgba(0, 30, 30, 0.1);
+      }
+      main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      h1 {
+        margin: 0;
+        font-size: 5em;
+        transition-property: transform;
+      }
+      .textBlock::before {
+        content: attr(data-content);
+        position: absolute;
+        top: -50px;
+        height: 4rem;
+        overflow: hidden;
+        color: rgba(0, 25, 25, 0.8);
+        opacity: 0;
+        transition: opacity 1s;
+      }
+      .textBlock::after {
+        content: attr(data-content);
+        position: absolute;
+        top: -85px;
+        left: 0;
+        height: 3rem;
+        color: rgba(0, 25, 25, 0.6);
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 2s;
+      }
+
+      .textBlock:hover::after,
+      .textBlock:hover::before {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="textBlock" data-content="Hej!KK">Hej!KK</h1>
+      </div>
+    </main>
+  </body>
+</html>
