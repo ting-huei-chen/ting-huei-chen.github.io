@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --white: hsl(0, 0%, 100%);
+    --cyan: hsl(178, 100%, 50%);
+    --line: hsl(215, 32%, 27%);
+    --cyanOp: hsla(178, 100%, 50%,0.4);
+    --cardBG: hsl(216, 50%, 16%);
+    --mainBG: hsl(217, 54%, 11%);
+    --bodyCopy: 18px;
+    --light: 300;
+    --medium: 400;
+    --bold: 600;
+}
+html,body{
+    font-family: 'Outfit',Arial, sans-serif;
+    background-color: var(--mainBG);
+    color: var(--white);
+}
+h1{
+    font-size: x-large;
+}
+p{
+    font-size: var(--bodyCopy);
+    font-weight: var(--light);
+    color: var(--softBlue);
+}
+main{
+    padding: .8rem;
+    margin-top: 4rem;
+}
+figure, p{
+    margin: 0;
+}
+hr{
+    border: solid 1px var(--line);
+}
+.card{
+    max-width: 35ch;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: var(--cardBG);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.imgBox{
+    position: relative;
+    width: 100%;
+    height: 0;
+    border-radius: 10px;
+    padding-bottom: 100%;
+    background-color: var(--cyan);
+    overflow: hidden;
+}
+.imgBox img{
+    width: 100%;
+    height: auto;
+}
+#overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#overlay:hover{
+    background: var(--cyanOp) url(images/icon-view.svg) no-repeat center;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.flexbox{
+    display: flex;
+    align-items: center;
+}
+#data{
+    justify-content: space-between; margin: 1rem 0;
+}
+.flexbox img{
+    height: 100%;
+    width: auto;
+    margin: .2rem;
+}
+.flexbox p{
+    font-size: medium;
+}
+h1:hover, .author:hover{
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: var(--cyan);
+    cursor: default;
+}
+#avatar{
+    border: solid 2px var(--white);
+    border-radius: 50%;
+    max-width: 2.5rem;
+    margin-right: 1rem;
+}
+.author{
+    font-weight: var(--medium);
+    color: var(--white);
+}
+#eth p{
+    font-weight: var(--bold);
+    color: var(--cyan);
+}
+.attribution { 
+    text-align: center;
+    font-size: .5rem; 
+    padding: 1rem;
+}
+.attribution a { color: var(--cyan); }
