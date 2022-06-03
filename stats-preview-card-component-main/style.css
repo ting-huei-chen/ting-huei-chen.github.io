@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root {
+    --violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --stat: hsla(0, 0%, 100%, 0.6);
+    --para: hsla(0, 0%, 100%, 0.75);
+    --cardBG: hsl(244, 38%, 16%);
+    --mainBG: hsl(233, 47%, 7%);
+    --bodyCopy: 15px;
+    --medium: 400;
+    --bold: 700;
+    --mobile:375px;
+    --desktop:1440px;
+}
+html,body{
+    font-family: 'Inter','Lexend Deca',Arial, sans-serif;
+    background-color: var(--mainBG);
+    font-size: var(--bodyCopy);
+    margin: 0;
+    padding: 0;
+}
+h1{
+    letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: var(--bold);
+    color: var(--white);
+}
+h1 span{
+    color: var(--violet);
+}
+p{
+    font-size: 0.8rem;
+    font-weight: var(--medium);
+    color: var(--para);
+    
+}
+section>p{
+    line-height: 2;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+   padding: 1.5rem;
+}
+.card{
+    width: 100%;
+    max-width: 100ch;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--cardBG);
+    border-radius: 10px;
+    overflow: hidden;
+}
+section{
+    max-width: 50ch;
+    padding: 3rem 4rem;
+    margin-right: 2rem;
+}
+.fig{
+    text-transform: uppercase;
+    font-family: 'Lexend Deca',Arial, sans-serif;
+    color: var(--stat);
+    font-size: 0.5rem;
+}
+mark{
+    font-family: 'Inter',Arial, sans-serif;
+    text-transform: unset;
+    font-size: 1.5rem;
+    display: block;
+    font-weight: var(--bold);
+    color: var(--white);
+    background-color: transparent;
+}
+footer{
+    color: var(--para);
+}
+.imgBox{
+    background-image: linear-gradient(to bottom,
+    hsla(277, 64%, 61%,0.3),
+    hsla(277, 64%, 61%,0.3)),url(./images/image-header-desktop.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: var(--violet);
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+}
+#data{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: var(--violet); }
+@media only screen and (max-width: 600px) {
+    section{
+        padding: 2rem;
+    }
+    .card,#data{
+        flex-direction: column;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    .imgBox{
+        height: 30ch;
+        background-image: linear-gradient(to bottom,
+    hsla(277, 64%, 61%,0.3),
+    hsla(277, 64%, 61%,0.3)),url(./images/image-header-mobile.jpg);
+    width: 100%;
+    }
+    #data,.fig{
+        margin-top: 1rem;
+    }
+    
+}
