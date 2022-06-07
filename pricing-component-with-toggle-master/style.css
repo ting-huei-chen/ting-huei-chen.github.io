@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root {
+    --gradient1: hsl(236, 72%, 79%);
+    --gradient2: hsl(237, 63%, 64%);
+    --white: hsl(240, 78%, 98%);
+    --lgrey: hsl(234, 14%, 74%);
+    --grey: hsl(233, 13%, 49%);
+    --dark: hsl(232, 13%, 33%);
+    --bodyCopy: 15px;
+    --bold: 700;
+    --mobile:375px;
+    --desktop:1440px;
+    --radius: 10px;
+}
+html,body{
+    font-family: 'Montserrat',Arial, sans-serif;
+    background-color: var(--mainBG);
+    font-size: var(--bodyCopy);
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body{
+    background: url(images/bg-top.svg),url(images/bg-bottom.svg);
+    background-color: var(--white);
+    background-repeat: no-repeat;
+    background-position: right top,left bottom;
+    min-height: 100vh;
+}
+h1{
+    font-size: x-large;
+    margin: 3rem 0 0 0;
+}
+h1,p{
+    color: var(--grey);
+    letter-spacing: .5px;
+}
+h2{font-size: medium;}
+h3{
+    font-size: 4rem;
+    margin: 1rem 0;display: block;
+}
+span{display: inline-block;}
+span::first-letter{
+    font-size: 2rem;
+    vertical-align: 0.6rem;
+    margin-right: .2rem;
+}
+p{
+    font-size: 0.8rem;
+    font-weight: var(--medium);
+    color: var(--para);
+}
+hr,label{
+    color: var(--lgrey);
+}
+hr{
+    border-top: solid 1px var(--lgrey);
+    border-bottom: none;
+    margin: .5rem 0;
+}
+.switch {
+    cursor: pointer;
+    width: 3.2rem;
+    height: 1.8rem;
+    background: linear-gradient(135deg, var(--gradient1), var(--gradient2));;
+    display: block;
+    border-radius: 2rem;
+    position: relative;
+}
+.switch:after {
+    content: '';
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: #fff;
+    border-radius: 1.6rem;
+    transition: 0.3s;
+}
+input:checked + .switch:after {
+    left: calc(100% - 0.15rem);
+    transform: translateX(-100%);
+}
+.switch:active:after {
+    width: 1.8rem;
+}
+.card{
+    width: 100%;
+    max-width: 30ch;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+.card:nth-of-type(1){border-radius: var(--radius) 0 0 var(--radius);}
+.card:nth-of-type(3){border-radius: 0 var(--radius) var(--radius) 0;}
+.card:nth-of-type(even){
+    background-image: linear-gradient(135deg, var(--gradient1), var(--gradient2));
+    color: var(--white);
+    padding: 3rem 2rem;
+    z-index: 2;
+    border-radius: var(--radius);
+}
+.btn{
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+    padding: 1rem;
+    color: var(--white);
+    background: linear-gradient(90deg, var(--gradient1), var(--gradient2));
+    margin-top: 1.5rem;
+}
+.card:nth-of-type(even) .btn{
+    background: var(--white);
+    color: var(--gradient2);
+}
+.btn:hover{
+    background: transparent;
+    color: var(--grey);
+    outline: solid 1.5px var(--grey);
+}
+.card:nth-of-type(even) .btn:hover{
+    background: transparent;
+    color: var(--white);
+    outline: solid 1.5px var(--white);
+}
+.monthly,input[type=checkbox]{
+    display: none;
+}
+.attribution { font-size: .8rem;}
+.attribution a { color: var(--gradient2); }
+#toggle,#cardArray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+#toggle{gap: 1rem;}
+@media only screen and (max-width: 900px) {
+    h3{font-size: 5vw;}
+    span::first-letter{vertical-align: baseline;}
+}
+@media only screen and (max-width: 600px) {
+    h3{font-size: 4rem;}
+    span::first-letter{vertical-align: 0.6rem;}
+    #cardArray{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .card{
+        margin-bottom: 2rem;
+        border-radius: var(--radius) !important;
+    }
+}

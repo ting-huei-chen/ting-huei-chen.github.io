@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Our Pricing</h1>
+      <div id="toggle">
+        <label for="pricing">Annually</label>
+        <input type="checkbox" name="pricing" id="pricing" />
+        <label for="pricing" class="switch"></label>
+        <label for="pricing">Monthly</label>
+      </div>
+      <div id="cardArray">
+        <div class="card">
+          <h2>Basic</h2>
+
+          <h3>
+            <span class="monthly">&dollar;19.99</span
+            ><span class="annually">&dollar;199.99</span>
+          </h3>
+          <hr />
+          <p>500 GB Storage</p>
+          <hr />
+          <p>2 Users Allowed</p>
+          <hr />
+          <p>Send up to 3 GB</p>
+          <hr />
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h2>Professional</h2>
+          <h3>
+            <span class="monthly">&dollar;24.99</span
+            ><span class="annually">&dollar;249.99</span>
+          </h3>
+          <hr />
+          <p>1 TB Storage</p>
+          <hr />
+          <p>5 Users Allowed</p>
+          <hr />
+          <p>Send up to 10 GB</p>
+          <hr />
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h2>Master</h2>
+          <h3>
+            <span class="monthly">&dollar;39.99</span
+            ><span class="annually">&dollar;399.99</span>
+          </h3>
+          <hr />
+          <p>2 TB Storage</p>
+          <hr />
+          <p>10 Users Allowed</p>
+          <hr />
+          <p>Send up to 20 GB</p>
+          <hr />
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://codepen.io/TingHueiChen">Ting-Huei Chen</a>.
+      </div>
+    </footer>
+    <script>
+      var toggle = document.getElementById("pricing");
+      toggle.addEventListener("click", function () {
+        var monthly = document.querySelectorAll(".monthly");
+        var annually = document.querySelectorAll(".annually");
+        if (toggle.checked) {
+          monthly.forEach((e) => (e.style.display = "inline-block"));
+          annually.forEach((e) => (e.style.display = "none"));
+        } else {
+          monthly.forEach((e) => (e.style.display = "none"));
+          annually.forEach((e) => (e.style.display = "inline-block"));
+        }
+      });
+    </script>
+  </body>
+</html>
