@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repository](https://github.com/hejkeikei/intro-component-with-signup-form)
-- Live Site URL: [hejkeikei.github.io](https://hejkeikei.github.io/intro-component-with-signup-form)
+- Live Site URL: [hejkeikei.github.io](https://hejkeikei.github.io/intro-component-with-signup-form-master/)
 
 ## My process
 
