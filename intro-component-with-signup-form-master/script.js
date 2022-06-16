@@ -1,6 +1,6 @@
 var fields = document.querySelectorAll("input");
 var submitBtn = document.getElementById("submit");
-submitBtn.addEventListener("click",function(){
+submitBtn.addEventListener("submit",function(){
     event.preventDefault();
     for(let i=0; i< fields.length-1; i++){
         if(fields[i].value==""){
