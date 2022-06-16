@@ -1,7 +1,7 @@
 var fields = document.querySelectorAll("input");
 var submitBtn = document.getElementById("submit");
 submitBtn.addEventListener("click",function(){
-    preventDefault();
+    event.preventDefault();
     for(let i=0; i< fields.length-1; i++){
         if(fields[i].value==""){
             fields[i].style.border="solid 2px var(--red)";
