@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
+    <main>
+      <div class="row">
+        <p><span id="traffic">100K</span> Pageviews</p>
+        <h2>
+          <mark>$<span id="price">16.00</span></mark> /month
+        </h2>
+      </div>
+      <form action="#" method="get">
+        <input
+          type="range"
+          name="slider"
+          id="slider"
+          min="1"
+          max="5"
+          step="1"
+          class="slider"
+        />
+        <div class="row">
+          <label for="toggle"> Monthly Billing</label>
+          <input type="checkbox" name="toggle" id="toggle" />
+          <label for="toggle" class="switch"></label>
+          <label for="toggle">Yearly Billing</label>
+          <p class="tag">25% discount</p>
+        </div>
+        <hr />
+        <div class="row">
+          <ul>
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+          <input type="submit" value="Start my trial" />
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
