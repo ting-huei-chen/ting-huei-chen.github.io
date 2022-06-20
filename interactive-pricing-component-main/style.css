@@ -29,12 +29,13 @@ html,body{
     flex-direction: column;
     justify-content: center;
 }
-body,.row{
+body,.row,form{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
-main{
+form{
     background-color: var(--white);
     border-radius: var(--radius);
     padding: 2rem;
@@ -42,12 +43,20 @@ main{
     color: var(--text);
     font-size: xx-small;
     width: 100%;
-    max-width: 60ch;
+    max-width: 70ch;
+    flex-direction: column;
+    overflow: hidden;
 }
+
 header{
     text-align: center;
     background: url(images/pattern-circles.svg) no-repeat center;
     min-height: 20vh;
+    color: var(--text);
+}
+h1{
+    font-size: clamp(1rem, 5vw, 1.8rem);
+    color: var(--ctab)
 }
 h2{font-weight: var(--regular);}
 mark{
@@ -57,34 +66,126 @@ mark{
     font-weight: var(--bold);
     color: var(--ctab);
 }
+
 /* slider */
-input[type=range]{
-    appearance: none;
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].slider {
     width: 100%;
     height: .5rem;
-    background-color: var(--sbare);
-    border-radius: 1rem;
+    margin: 2rem 0;
+    -webkit-appearance: none;
+  }
+  
+  /*progress support*/
+  input[type=range].slider.slider-progress {
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--value) - var(--min)) / var(--range));
+    --sx: calc(0.5 * 2rem + var(--ratio) * (100% - 2rem));
+  }
+  
+  input[type=range].slider:focus {
     outline: none;
-    margin: 1rem 0;
-}
-input[type=range]::-webkit-slider-thumb{
+  }
+  
+  /*webkit*/
+  input[type=range].slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
     width: 2rem;
     height: 2rem;
-    border-radius: 50%;
-    appearance: none;
-    outline: none;
+    border-radius: 1rem;
     background: var(--sbar) url(images/icon-slider.svg) no-repeat center;
-}
-input[type=range]::-webkit-slider-thumb:hover{
+    border: none;
+    box-shadow: 0px .5rem 15px var(--sback);
+    margin-top: calc(1em * 0.5 - 2rem * 0.5);
+  }
+  
+  input[type=range].slider::-webkit-slider-runnable-track {
+    height: .5rem;
+    border: none;
+    border-radius: 0.5em;
+    background: var(--sbare);
+    box-shadow: none;
+  }
+  
+  input[type=range].slider::-webkit-slider-thumb:hover {
     background-color: var(--sback);
-}
-input[type=range]::-ms-fill-lower{
-    height: 10px;
-    appearance: none;
-    color: #13bba4;
-    margin-top: -1px;
-    background-color: var(--sbar);
-}
+  }
+  
+  input[type=range].slider.slider-progress::-webkit-slider-runnable-track {
+    background: linear-gradient(var(--sbar),var(--sbar)) 0/var(--sx) 100% no-repeat, var(--sbare);
+  }
+  
+  /*mozilla*/
+  input[type=range].slider::-moz-range-thumb {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background: var(--sbar) url(images/icon-slider.svg) no-repeat center;
+    border: none;
+    box-shadow: none;
+  }
+  
+  input[type=range].slider::-moz-range-track {
+    height: 1em;
+    border: none;
+    border-radius: 0.5em;
+    background: var(--sbare);
+    box-shadow: none;
+  }
+  
+  input[type=range].slider::-moz-range-thumb:hover {
+    background-color: var(--sback);
+  }
+  
+  input[type=range].slider.slider-progress::-moz-range-track {
+    background: linear-gradient(var(--sbar),var(--sbar)) 0/var(--sx) 100% no-repeat, var(--sbare);
+  }
+  
+  /*ms*/
+  input[type=range].slider::-ms-fill-upper {
+    background: transparent;
+    border-color: transparent;
+  }
+  
+  input[type=range].slider::-ms-fill-lower {
+    background: transparent;
+    border-color: transparent;
+  }
+  
+  input[type=range].slider::-ms-thumb {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: var(--sbar) url(images/icon-slider.svg) no-repeat center;
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+  
+  input[type=range].slider::-ms-track {
+    height: 1rem;
+    border-radius: 0.5em;
+    background: var(--sbare);
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+  
+  input[type=range].slider::-ms-thumb:hover {
+    background-color: var(--sback);
+  }
+  
+  input[type=range].slider.slider-progress::-ms-fill-lower {
+    height: 1rem;
+    border-radius: 0.5em 0 0 0.5em;
+    margin: -undefined 0 -undefined -undefined;
+    background: var(--sbar);
+    border: none;
+    border-right-width: 0;
+  }
+  
 
 input[type=submit]{
     background-color: var(--ctab);
@@ -98,9 +199,10 @@ input[type=submit]:hover{
     color: var(--white);
 }
 hr{
-    border-top: solid 1px var(--text);
+    border-top: solid 1px var(--ctat);
     border-bottom: none;
-    margin: 1rem 0;
+    width: calc(100% + 4rem);
+    margin: 1rem -2rem;
 }
 ul{
     list-style-image: url(images/icon-check.svg);
@@ -116,10 +218,10 @@ input[type=range]::-webkit-slider-thumb,input[type=submit],.switch{
     font-weight: var(--bold);
     letter-spacing: 2px;
 }
-.row:last-of-type{
+.row:nth-of-type(odd){
     justify-content: space-between;
 }
-form> .row{
+form .row:nth-of-type(2){
     justify-content: flex-end;
     gap: unset;
 }
@@ -156,12 +258,13 @@ input[type=checkbox]:checked + .switch,.switch:hover  {
 .switch:active:after {
     width: 1.8rem;
 }
-.tag{
+.tag,.tag:after{
     background-color: var(--red);
     color: var(--redt);
     padding: .2rem .5rem;
     border-radius: var(--radius);
 }
+footer{padding: 2rem;}
 .attribution {
     font-size: xx-small;
     text-align: center;
@@ -171,4 +274,26 @@ input[type=checkbox]:checked + .switch,.switch:hover  {
 }
 input, label,input[type=range]::-webkit-slider-thumb{
     transition: all .2s ease-in-out;
+}
+@media screen and (max-width:600px) {
+    body{
+        padding: 2rem;
+    }
+    header{
+        min-height: 30vh;
+        font-size: xx-small;
+    }
+    .row{
+        justify-content: center !important;
+    }
+    .row:last-of-type{
+        flex-direction: column;
+    }
+    h2{
+        order: 2;
+    }
+    input[type=range]{
+        order: 1;
+    }
+
 }
