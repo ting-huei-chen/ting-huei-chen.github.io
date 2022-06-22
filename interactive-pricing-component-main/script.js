@@ -1,4 +1,5 @@
 const priceArr = [8,12,16,24,36];
+const viewArr = ["10K","50K","100K","500K","1M"];
 const traffic = document.getElementById("traffic");
 const price = document.getElementById("price");
 const togg = document.getElementById("toggle");
@@ -10,31 +11,8 @@ document.getElementById("slider").addEventListener("change",function(){
     }else{
         newArr = priceArr;
     }
-    switch(slider) {
-        case '1':
-            traffic.innerHTML=10+"K";
-            price.innerHTML=newArr[0].toFixed(2);
-          break;
-        case '2':
-            traffic.innerHTML=50+"K";
-            price.innerHTML=newArr[1].toFixed(2);
-          break;
-        case '3':
-            traffic.innerHTML=100+"K";
-            price.innerHTML=newArr[2].toFixed(2);
-          break;
-        case '4':
-            traffic.innerHTML=500+"K";
-            price.innerHTML=newArr[3].toFixed(2);
-          break;
-        case '5':
-            traffic.innerHTML=1+"M";
-            price.innerHTML=newArr[4].toFixed(2);
-            break;
-        default:
-            traffic.innerHTML=10+"K";
-            price.innerHTML=newArr[0].toFixed(2);
-    }
+    traffic.innerHTML=viewArr[slider-1];
+    price.innerHTML=newArr[slider-1].toFixed(2);
 })
 
 togg.addEventListener("change",function(){
