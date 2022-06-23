@@ -29,6 +29,10 @@ html,body{
     flex-direction: column;
     justify-content: center;
 }
+body{
+  background: url(images/bg-pattern.svg) top no-repeat;
+  background-size: 100%;
+}
 body,.row,form{
     display: flex;
     align-items: center;
@@ -103,7 +107,7 @@ input[type=range].slider {
   input[type=range].slider::-webkit-slider-runnable-track {
     height: .5rem;
     border: none;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     background: var(--sbare);
     box-shadow: none;
   }
@@ -127,9 +131,9 @@ input[type=range].slider {
   }
   
   input[type=range].slider::-moz-range-track {
-    height: 1em;
+    height: .5rem;
     border: none;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     background: var(--sbare);
     box-shadow: none;
   }
@@ -161,16 +165,14 @@ input[type=range].slider {
     border: none;
     box-shadow: none;
     margin-top: 0;
-    box-sizing: border-box;
   }
   
   input[type=range].slider::-ms-track {
-    height: 1rem;
-    border-radius: 0.5em;
+    height: .5rem;
+    border-radius: 0.5rem;
     background: var(--sbare);
     border: none;
     box-shadow: none;
-    box-sizing: border-box;
   }
   
   input[type=range].slider::-ms-thumb:hover {
@@ -178,7 +180,7 @@ input[type=range].slider {
   }
   
   input[type=range].slider.slider-progress::-ms-fill-lower {
-    height: 1rem;
+    height: .5rem;
     border-radius: 0.5em 0 0 0.5em;
     margin: -undefined 0 -undefined -undefined;
     background: var(--sbar);
@@ -213,7 +215,7 @@ li{line-height: 2;}
 input[type=range]::-webkit-slider-thumb,input[type=submit],.switch{
     cursor: pointer;
 }
-.row:first-of-type:first-child p{
+label[for=slider]{
     text-transform: uppercase;
     font-weight: var(--bold);
     letter-spacing: 2px;
@@ -295,5 +297,4 @@ input, label,input[type=range]::-webkit-slider-thumb{
     input[type=range]{
         order: 1;
     }
-
 }
