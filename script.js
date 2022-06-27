@@ -16,7 +16,7 @@ function loadImg(meal,searchTerm){
         if(response.ok)
             return response.json();
         else
-            alert(response.status);
+            // alert(response.status);
     })
     .then(data=>{
         const imageNodes = [];
