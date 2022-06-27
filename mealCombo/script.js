@@ -1,7 +1,7 @@
-
-var url =
-  "https://api.unsplash.com/search/photos/?query=rice&client_id=LVlqvl5R5gtId0y5-bb-SkraI0ZgSltaXPKo51HbS2o&per_page=1";
-console.log(url);
+var randomNum =Math.floor(Math.random() * 10);
+// var url =
+//   "https://api.unsplash.com/search/photos/?query=rice&client_id=LVlqvl5R5gtId0y5-bb-SkraI0ZgSltaXPKo51HbS2o&per_page="+randomNum;
+// console.log(url);
 var utm = "&utm_source=Photo-app&utm_medium=referral";
 
 var container = document.querySelector("#container");
@@ -9,7 +9,7 @@ var container = document.querySelector("#container");
 function loadImg(meal,searchTerm){
     console.log("meal="+meal);
     let url =
-  "https://api.unsplash.com/search/photos/?query="+searchTerm+"&client_id=LVlqvl5R5gtId0y5-bb-SkraI0ZgSltaXPKo51HbS2o&per_page=3";
+  "https://api.unsplash.com/search/photos/?query="+searchTerm+"&client_id=LVlqvl5R5gtId0y5-bb-SkraI0ZgSltaXPKo51HbS2o&per_page="+randomNum;
     fetch(url)
     .then(response=>{
         console.log(response);
@@ -31,9 +31,9 @@ function loadImg(meal,searchTerm){
 }
 
 
-var mainArr = ["Ramen","noodle","pasta","fried rice","hamburger","bacon","sandwich","Avocado roll","BBQ","buritto"];
-var drinksArr = ["soda","black tea","bubble tea","corn soup","tofu soup","juice","beer"];
-var sideArr = ["cucumber","salad","dumplings","fries","chicken wings","baked beans","cupcakes","donuts","eggrolls"];
+var mainArr = ["Ramen","noodle","pasta","fried rice","hamburger","bacon","sandwich","Avocado roll","BBQ","buritto","Italian bread","Butter chicken","Lasagna","Pizza","Sushi"];
+var drinksArr = ["soda","black tea","bubble tea","corn soup","tofu soup","Juice","Beer","Matcha tea", "Ice tea","Wine"];
+var sideArr = ["cucumber","salad","dumplings","fries","chicken wings","baked beans","cupcakes","donuts","eggrolls","Ice cream","French dip","Hash browns","Waffles"];
 const genBtn = document.getElementById("generate");
 const main = document.getElementById("main");
 const side = document.getElementById("side");
