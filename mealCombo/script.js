@@ -31,9 +31,9 @@ function loadImg(meal,searchTerm){
 }
 
 
-var mainArr = ["Ramen","noodle","pasta","rice","hamburger","bacon"];
-var drinksArr = ["soda","black tea","bubble tea","corn soup","tofu soup"];
-var sideArr = ["cucumber","salad","dumplings","fries","chicken wings"];
+var mainArr = ["Ramen","noodle","pasta","fried rice","hamburger","bacon","sandwich","Avocado roll","BBQ","buritto"];
+var drinksArr = ["soda","black tea","bubble tea","corn soup","tofu soup","juice","beer"];
+var sideArr = ["cucumber","salad","dumplings","fries","chicken wings","baked beans","cupcakes","donuts","eggrolls"];
 const genBtn = document.getElementById("generate");
 const main = document.getElementById("main");
 const side = document.getElementById("side");
