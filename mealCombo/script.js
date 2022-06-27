@@ -9,14 +9,14 @@ var container = document.querySelector("#container");
 function loadImg(meal,searchTerm){
     console.log("meal="+meal);
     let url =
-  "https://api.unsplash.com/search/photos/?query="+searchTerm+"&client_id=LVlqvl5R5gtId0y5-bb-SkraI0ZgSltaXPKo51HbS2o&per_page="+randomNum;
+  "https://api.unsplash.com/search/photos/?query="+searchTerm+"&client_id=b-rrqe7bytE54qyNIBzSz_SYMLKQ5fVWsblsjjoRDT0&per_page="+randomNum;
     fetch(url)
     .then(response=>{
         console.log(response);
         if(response.ok)
             return response.json();
-        else
-            alert(response.status);
+        // else
+        //     alert(response.status);
     })
     .then(data=>{
         const imageNodes = [];
@@ -31,9 +31,9 @@ function loadImg(meal,searchTerm){
 }
 
 
-var mainArr = ["Ramen","noodle","pasta","fried rice","hamburger","bacon","sandwich","Avocado roll","BBQ","buritto","Italian bread","Butter chicken","Lasagna","Pizza","Sushi"];
-var drinksArr = ["soda","black tea","bubble tea","corn soup","tofu soup","Juice","Beer","Matcha tea", "Ice tea","Wine"];
-var sideArr = ["cucumber","salad","dumplings","fries","chicken wings","baked beans","cupcakes","donuts","eggrolls","Ice cream","French dip","Hash browns","Waffles"];
+var mainArr = ["Ramen","noodle","pasta","fried rice","hamburger","bacon","sandwich","Avocado roll","BBQ","Burrito","Italian bread","Butter chicken","Lasagna","Pizza","Sushi","Salmon","French toast","Grilled chicken","Tempura","Taco","Seafood pasta","Pasta Bolognese","Hot pot","Kimbap"];
+var drinksArr = ["soda","black tea","Bubble tea","corn soup","tofu soup","Juice","Beer","Matcha tea", "Ice tea","Wine","Smoothie","Lemonade"];
+var sideArr = ["cucumber","Salad","Dumplings","Fries","Chicken wings","Baked beans","Cupcakes","donuts","Egg roll","Ice cream","French dip","Hash browns","Waffles","Takoyaki","Cake","Baked potato","Smoked salmon","Vegetable stew"];
 const genBtn = document.getElementById("generate");
 const main = document.getElementById("main");
 const side = document.getElementById("side");
