@@ -1,10 +1,10 @@
 # hejkeikei.github.io
 All the frontend exercises
 
-## Live Site Links
+## Links
 
-| **Title** | **Content** |
-|-----------|:-------------:|
+| **Projects Demo** | **Content** | **Repository** |
+|-----------|:-------------:|:-------------:|
 |[Interactive Rating Component](https://hejkeikei.github.io/interactive-rating-component/)|Frontend Mentor Chanllenge|
 |[NFT Prview Card](https://hejkeikei.github.io/nft-preview-card-component-main/)|Frontend Mentor Chanllenge|
 |[Stats Preview Card](https://hejkeikei.github.io/stats-preview-card-component-main/)|Frontend Mentor Chanllenge|
@@ -13,5 +13,6 @@ All the frontend exercises
 |[To-do List](https://hejkeikei.github.io/to-do-list_vanillajs/)|A single-list task component|
 |[Interactive Pricing Component](https://hejkeikei.github.io/interactive-pricing-component-main/)|Frontend Mentor Chanllenge|
 |[What Should I eat?](https://hejkeikei.github.io/mealCombo/)|Meal combination generator|
+|[Taiwan Vegan Map](https://hejkeikei.github.io/taiwanVegMap/)|Taiwan vegetarian restaurant guide with maps|
 
 
