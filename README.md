@@ -13,6 +13,6 @@ All the frontend exercises
 |[To-do List](https://hejkeikei.github.io/to-do-list_vanillajs/)|A single-list task component|[to-do-list_vanillajs](https://github.com/hejkeikei/to-do-list_vanillajs)|
 |[Interactive Pricing Component](https://hejkeikei.github.io/interactive-pricing-component-main/)|Frontend Mentor Chanllenge|[interactive-pricing-component](https://github.com/hejkeikei/hejkeikei.github.io/tree/main/interactive-pricing-component-main)|
 |[What Should I eat?](https://hejkeikei.github.io/mealCombo/)|Meal combination generator|[mealCombo](https://github.com/hejkeikei/mealCombo)|
-|[Taiwan Vegan Map](https://hejkeikei.github.io/taiwanVegMap/)|Taiwan vegetarian restaurant guide with maps|[mealCombo](https://github.com/hejkeikei/mealCombo)|
+|[Taiwan Vegan Map](https://hejkeikei.github.io/taiwanVegMap/)|Taiwan vegetarian restaurant guide with maps. (Coop project with @bananatina)|[vegmap](https://github.com/bananatina/vegmap)|
 
 
