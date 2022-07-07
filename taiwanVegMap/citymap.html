@@ -23,7 +23,7 @@
         <a href="about.html">About</a>
         <a href="explore.html">Explore</a>
         <a href="contact.html">Contact</a>
-        <a href="block.html">Blog</a>
+        <a href="blog.html">Blog</a>
       </nav>
     </header>
     <main id="citymapMain">
@@ -32,14 +32,12 @@
       <div id="filterbox" class="hidden">
         <fieldset>
           <legend>Diet</legend>
-          <label for="vegetarian">Vegetarian</label>
           <input type="checkbox" name="diet" id="vegetarian" />
-          <label for="ovoLacto">Ovo-lacto</label>
-          <input type="checkbox" name="diet" id="ovoLacto" />
-          <label for="vegan">Vegan</label>
+          <label for="vegetarian">Vegetarian</label>
           <input type="checkbox" name="diet" id="vegan" />
-          <label for="buddhistVegan">Buddhist Vegan</label>
+          <label for="vegan">Vegan</label>
           <input type="checkbox" name="diet" id="buddhistVegan" />
+          <label for="buddhistVegan">Buddhist Vegan</label>
         </fieldset>
         <fieldset id="toggleFilter">
           <legend>Filter</legend>
@@ -60,7 +58,7 @@
         </fieldset>
         <input type="submit" value="Submit" class="btn" />
       </div>
-      <div id="mapContainer">
+      <div id="mapContainer" class="hidden">
         <div class="mapouter">
           <div class="gmap_canvas">
             <iframe
