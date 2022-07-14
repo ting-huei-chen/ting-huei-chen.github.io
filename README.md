@@ -14,5 +14,6 @@ All the frontend exercises
 |[Interactive Pricing Component](https://hejkeikei.github.io/interactive-pricing-component-main/)|Frontend Mentor Chanllenge|[interactive-pricing-component](https://github.com/hejkeikei/hejkeikei.github.io/tree/main/interactive-pricing-component-main)|
 |[What Should I eat?](https://hejkeikei.github.io/mealCombo/)|Meal combination generator|[mealCombo](https://github.com/hejkeikei/mealCombo)|
 |[Taiwan Vegan Map](https://hejkeikei.github.io/taiwanVegMap/)|Taiwan vegetarian restaurant guide with maps. (Coop project with @bananatina)|[vegmap](https://github.com/bananatina/vegmap)|
+|[Home Deco Shop Landing Page](https://hejkeikei.github.io/bootstrap5-exercise/ex1.html)|Responsive landing page exercise using Bootstrap5||
 
 
