@@ -1,5 +1,6 @@
 # hejkeikei.github.io
-All the frontend exercises
+👋Hi there! I'm Ting! I am a frontend developer that used to be a watch designer.
+Here's all my frontend exercises
 
 ## Links
 
