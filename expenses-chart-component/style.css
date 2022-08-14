@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+:root{
+    --red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dbrown: hsl(25, 47%, 15%);
+    --mbrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --lorange: hsl(33, 100%, 98%);
+    --copy: 18px;
+    --regular: 400;
+    --bold: 700;
+}
+*{
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'DM Sans', Arial, sans-serif;
+    background-color: var(--cream);
+    font-size: var(--copy);
+    color: var(--dbrown);
+}
+header, main{
+    width: 100%;
+    max-width: 40ch;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+header{
+    background-color: var(--red);
+    color: var(--lorange);
+}
+main{
+    background-color: var(--lorange);
+}
+section{
+    align-items: flex-end;
+}
+svg{
+    width: 100%;
+    height: 200px;
+}
+h1{
+    font-size: x-small;
+    margin: .5rem 0;
+    font-weight: var(--bold);
+}
+h1,h3{
+    font-weight: var(--regular);
+}
+header p{
+    font-size: x-large;
+    margin: .5rem 0;
+}
+h2{
+    margin: 0 0 1rem 0;
+}
+h3{
+    margin-bottom: .2rem;
+}
+h3,#changes,.grid p{
+    font-size:small;
+    color: var(--mbrown);
+}
+p span{
+    display: block;
+    color: var(--dbrown);
+    font-weight: var(--bold);
+}
+hr{
+    border: solid 2px var(--cream);
+    border-bottom: none;
+    height: 0;
+}
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    text-align: center;
+}
+.grid p{
+    margin-top: 0;
+}
+.attribution {
+    font-size: small;
+    text-align: center;
+}
+.attribution a {
+    color: var(--red);
+}
+.bar:hover{
+    opacity: 0.8;
+}
+.bar,.tip{
+    transition:all ease-in-out 0.2s;
+}
+#total{
+    font-size: 2rem;
+    font-weight: var(--bold);
+    margin: 0.2rem 0 0 0;
+}
+#changes{
+    text-align: right;
+    margin: 0;
+}
+#changes span{
+    font-size: medium;
+}
