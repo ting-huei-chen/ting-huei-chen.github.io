@@ -16,5 +16,7 @@ Here's all my frontend exercises
 |[What Should I eat?](https://hejkeikei.github.io/mealCombo/)|Meal combination generator|[mealCombo](https://github.com/hejkeikei/mealCombo)|
 |[Taiwan Vegan Map](https://hejkeikei.github.io/taiwanVegMap/)|Taiwan vegetarian restaurant guide with maps. (Coop project with @bananatina)|[vegmap](https://github.com/bananatina/vegmap)|
 |[Home Deco Shop Landing Page](https://hejkeikei.github.io/bootstrap5-exercise/ex1.html)|Responsive landing page exercise using Bootstrap5||
+|[Expenses chart component](https://hejkeikei.github.io/expenses-chart-component/)|Frontend Mentor Chanllenge|[expenses-chart-component](https://github.com/hejkeikei/expenses-chart-component)|
+
 
 
