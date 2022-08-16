@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+    --cyan: hsl(193, 38%, 86%);
+    --green: hsl(150, 100%, 66%);
+    --gBlue: hsl(217, 19%, 38%);
+    --dgBlue: hsl(217, 19%, 24%);
+    --dBlue: hsl(218, 23%, 16%);
+    --display: 28px;
+}
+html,body{
+    font-family: 'Manrope', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dBlue);
+    color: var(--cyan);
+    text-align: center;
+}
+main{
+    width: 100%;
+    min-height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+#container{
+    background-color: var(--dgBlue);
+    padding: 2.2rem 1rem 3rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px var(--dBlue);
+    font-size: smaller;
+    position: relative;
+    font-weight: 800;
+}
+blockquote{
+    font-size: var(--display);
+    margin: 1rem 0;
+}
+#container p{
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+}
+.divider{
+    min-height: 3rem;
+    background: url(images/pattern-divider-mobile.svg) center no-repeat;
+}
+button{
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: url(images/icon-dice.svg) center no-repeat;
+    background-color: var(--green);
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%,0);
+    transition: all ease-in-out .5s;
+}
+button:hover{
+    box-shadow: 0px 0px 20px var(--green);
+}
+.attribution {
+    font-size: xx-small;
+  }
+.attribution a ,#container p{
+    color: var(--green);
+}
+@media screen and (min-width:600px) {
+    blockquote{
+        margin: 2.5rem;
+    }
+    #container{
+        max-width: 60ch;
+    }
+    .divider{
+        background: url(images/pattern-divider-desktop.svg) center no-repeat;
+    }
+}
