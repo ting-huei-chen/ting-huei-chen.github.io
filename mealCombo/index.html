@@ -5,48 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What should I eat?</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="container my-5">
-      <header class="container-md border">
-        <h1>What should I eat?</h1>
+      <header class="container-md">
+        <h1 class="text-center">What should I eat?</h1>
+        <div class="row justify-content-center">
+          <button id="generate" class="btn btn-dark btn-lg col-lg-3 m-2 mb-4">
+            Quick Generate
+          </button>
+        </div>
       </header>
-      <button id="generate" class="btn btn-dark btn-lg">Quick Generate</button>
 
-      <section class="row" id="container">
-        <h2>Your Meal</h2>
-        <div class="card col-lg-4 col-md-3" id="main">
+      <section class="row justify-content-center p-lg-5 p-2" id="container">
+        <h2 class="text-center">Your Meal</h2>
+        <div class="card col-lg-3 col-md-3 m-3" id="main">
           <div class="imgBox"></div>
           <div class="card-body">
             <h3 class="card-subtitle mb-2 text-muted">Main</h3>
             <h4 class="card-title">Placeholder</h4>
-            <a href="#" target="_blank" class="btn btn-primary">WHERE TO EAT</a>
-            <a href="#" target="_blank" class="btn btn-outline-dark"
-              >Make it myself</a
-            >
+            <div class="d-grid gap-2 d-md-block">
+              <a href="#" target="_blank" class="btn btn-primary">Map</a>
+              <a href="#" target="_blank" class="btn btn-outline-dark"
+                >Recipe</a
+              >
+            </div>
           </div>
         </div>
-        <div class="card col-lg-4 col-md-3" id="side">
+        <div class="card col-lg-3 col-md-3 m-3" id="side">
           <div class="imgBox"></div>
           <div class="card-body">
             <h3 class="card-subtitle mb-2 text-muted">Side</h3>
             <h4 class="card-title">Placeholder</h4>
-            <a href="#" target="_blank" class="btn btn-primary">WHERE TO EAT</a>
-            <a href="#" target="_blank" class="btn btn-outline-dark"
-              >Make it myself</a
-            >
+            <div class="d-grid gap-2 d-md-block">
+              <a href="#" target="_blank" class="btn btn-primary">Map</a>
+              <a href="#" target="_blank" class="btn btn-outline-dark"
+                >Recipe</a
+              >
+            </div>
           </div>
         </div>
-        <div class="card col-lg-4 col-md-3" id="drinks">
-          <div class="imgBox"></div>
+        <div class="card col-lg-3 col-md-3 m-3" id="drinks">
+          <div class="imgBox card-img-top"></div>
           <div class="card-body">
             <h3 class="card-subtitle mb-2 text-muted">Drinks</h3>
             <h4 class="card-title">Placeholder</h4>
-            <a href="#" target="_blank" class="btn btn-primary">WHERE TO EAT</a>
-            <a href="#" target="_blank" class="btn btn-outline-dark"
-              >Make it myself</a
+
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-primary btn-block-xs-only"
+              >Map</a
+            >
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-outline-dark btn-block-xs-only"
+              >Recipe</a
             >
           </div>
         </div>

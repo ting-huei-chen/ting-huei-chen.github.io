@@ -1,12 +1,24 @@
 *{
     box-sizing: border-box;
 }
+header h1{
+    color: var(--bs-white);
+}
 #container{
     opacity: 0;
+    background-color: var(--bs-gray-100);
 }
 .imgBox{
-    width: 30ch;
-    height: 30ch;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
+@include media-breakpoint-only(xs) {
+    .btn-block-xs-only {
+      display: block;
+      width: 100%;
+    }
+  }

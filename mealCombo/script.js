@@ -1,13 +1,13 @@
 var randomNum =Math.floor(Math.random() * 10);
 // var url =
 //   "https://api.unsplash.com/search/photos/?query=rice&client_id=LVlqvl5R5gtId0y5-bb-SkraI0ZgSltaXPKo51HbS2o&per_page="+randomNum;
-// console.log(url);
-var utm = "&utm_source=Photo-app&utm_medium=referral";
+
+
 
 var container = document.querySelector("#container");
 
 function loadImg(meal,searchTerm){
-    console.log("meal="+meal);
+    // console.log("meal="+meal);
     let url =
   "https://api.unsplash.com/search/photos/?query="+searchTerm+"&client_id=b-rrqe7bytE54qyNIBzSz_SYMLKQ5fVWsblsjjoRDT0&per_page="+randomNum;
     fetch(url)
@@ -15,8 +15,6 @@ function loadImg(meal,searchTerm){
         console.log(response);
         if(response.ok)
             return response.json();
-        // else
-        //     alert(response.status);
     })
     .then(data=>{
         const imageNodes = [];
@@ -51,7 +49,7 @@ function generateMeal(){
     for(let i of repeat){
         
         let elem = randomElem(window[i+"Arr"]);
-        console.log("generate meal="+i);
+        // console.log("generate meal="+i);
         
         loadImg(i,elem);
         let card = document.getElementById(i);
