@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naviagation Bar - type</title>
+    <link rel="stylesheet" href="/dist/css/nav.min.css" />
+    <script
+      src="https://kit.fontawesome.com/e2110d24a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1></h1>
+    <nav id="mainNav" role="navigation" aria-label="Main">
+      <div id="menu" class="menu-item"><i class="fa-solid fa-bars"></i></div>
+      <h2>Mail</h2>
+      <li class="menu-item">
+        <i class="fa-solid fa-inbox"></i><span>Inbox</span
+        ><span id="inboxNum" class="note">24</span>
+      </li>
+      <li class="menu-item">
+        <i class="fa-solid fa-star"></i><span>Starred</span>
+      </li>
+      <li class="menu-item">
+        <i class="fa-regular fa-clock"></i><span>Snoozed</span>
+      </li>
+      <li class="menu-item">
+        <i class="fa-solid fa-tag"></i><span>Important</span>
+      </li>
+      <li class="menu-item">
+        <i class="fa-solid fa-paper-plane"></i><span>Sent</span>
+      </li>
+      <li class="menu-item">
+        <i class="fa-solid fa-file-lines"></i><span>Draft</span>
+      </li>
+      <li class="menu-item" id="catagoryBtn">
+        <i class="fa-regular fa-folder-open"></i><span>Categories</span>
+      </li>
+      <ul id="catagoryList">
+        <li>Social</li>
+        <li>Updates</li>
+        <li>Promotion</li>
+      </ul>
+      <li class="menu-item">
+        <i class="fa-solid fa-trash-can"></i><span>Trash</span>
+      </li>
+    </nav>
+  </body>
+  <script src="nav.js"></script>
+</html>

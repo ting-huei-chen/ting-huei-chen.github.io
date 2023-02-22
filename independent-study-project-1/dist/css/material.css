@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --primary: #6750A4;
+    --onPrimaryHover: #6750A4EB;
+    --PrimaryPressed: #6750A41F;
+    --onPrimary: #FFFFFF;
+    --onSecondary: #1E192B;
+    --onSecondaryHover: #E8DEF8EB;
+    --onSecondaryPressed: #1E192B1F;
+    --shadow: #00000066;
+    --primaryContainer:#EADDFF;
+    --surfaceVariant: #E7E0EC;
+    --onSurface:#1C1B1F;
+    --onSurfaceVariant: #49454E;
+    --secondaryContainer: #E8DEF8;
+    --onSecondaryContainer: #1E192B;
+    --onSecondaryContainerHover: #1E192B14;
+    --onPrimaryContainer:#21005E;
+    --onPrimaryContainerHover:#21005E14;
+    --onPrimaryContainerPressed:#21005E1F;
+    --surface: #FFFBFE;
+    --primary8:#6750A414;
+    --btnHeight: 40px;
+    --btnPadding:24px;
+    --outline:#79747E;
+}
+*{
+    box-sizing: border-box;
+}
+html,button,a,input{
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+    color: var(--primary);
+    font-weight: 300;
+}
+#root{
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(400px, 1fr))
+}
+.group{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.group:nth-of-type(odd){
+    background-color: rgba(180, 180, 180, 0.1);
+}
+figcaption{
+    color: var(--onSurfaceVariant);
+    font-size: small;
+    text-align: center;
+}
+/* Genneral btutton */
+button,.segmentButton label,.btn{
+    position: relative;
+    margin: 1rem 2rem;
+    height: var(--btnHeight);
+    padding: 0 var(--btnPadding);
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    transition: all .2s ease-in-out;
+}
+.btn,.btn::before,.btn::after{
+    display: block;
+    text-decoration: none;
+}
+.btn-small{
+    height: 2rem;
+    padding: .5rem 1rem;
+    margin: unset;
+}
+
+button::before,.segmentButton label::before,.btn::before{
+    position: absolute;
+    top:0;
+    left: 0;
+    content: '';
+    border-radius: 5rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-in-out;
+}
+.elevated-btn{
+    background-color: var(--surface);
+    color: var(--primary);
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+
+.filled-btn{
+    background-color: var(--primary);
+    color: var(--onPrimary);
+}
+.filled-btn:hover{
+    background-color: var(--onPrimaryHover);
+}
+
+.filled-tonal-btn{
+    background-color: var(--secondaryContainer);
+    color: var(--onSecondary);
+}
+.outlined-btn{
+    background-color: var(--surface);
+    color: var(--primary);
+    outline: solid 1px var(--outline);
+}
+.text-btn{
+    background-color: unset;
+    color: var(--primary);
+}
+/* on Primary hover */
+.elevated-btn:hover::before,.outlined-btn:hover::before,.text-btn:hover::before,#button6:hover::before{
+    background-color: var(--primary8);
+}
+/* on onSecondary hover */
+.filled-tonal-btn:hover::before{
+    background-color: var(--onSecondaryPressed);
+}
+.segmentButton label:hover::before{
+    background-color: var(--onSecondaryContainerHover);
+
+}
+/* on Primary pressed  */
+.elevated-btn:active::before,.outlined-btn:active::before,.text-btn:active::before,#button6:active::before{
+    background-color: var(--PrimaryPressed);
+}
+
+/* hover raised button */
+.filled-btn:hover,.filled-tonal-btn:hover,.fab:hover,.eFab:hover{
+    box-shadow: 0 2px 5px var(--shadow);
+     transform: translate3d(0,-1px,0);
+}
+.filled-btn:active,.filled-tonal-btn:active,.fab:active,.eFab:active{
+    transform: translate3d(0,0,0);
+    box-shadow: none;
+}
+
+/* ------------- Other button ------------- */
+
+/* icon button Standard */
+.icon{
+    width: var(--btnHeight);
+    padding: 0;
+    border-radius: 50%;
+}
+.icon i{
+    width: 18px;
+    text-align: center;
+    /* vertical-align: middle; */
+}
+#button6{
+    color: var(--onSecondaryContainer);
+    background-color: var(--secondaryContainer);
+}
+
+/* Segment button */
+.segmentButton{
+    margin: 1rem 2rem;
+}
+.segmentButton label{
+    display: inline-block;
+    outline: solid 1px var(--primary);
+    padding: .65rem var(--btnPadding);
+    margin: 0 -.1rem;
+    color:var(--onSurface);
+}
+
+.segmentButton label:nth-of-type(1),.segmentButton label:nth-of-type(1):hover::before{
+    border-radius: 5rem 0 0 5rem;
+}
+.segmentButton label:nth-of-type(2),.segmentButton label:nth-of-type(2):hover::before{
+    border-radius: unset;
+}
+.segmentButton label:nth-of-type(3),.segmentButton label:nth-of-type(3):hover::before{
+    border-radius: 0 5rem 5rem 0;
+}
+.segmentButton input[type=checkbox]{
+    display: none;
+}
+.segmentButton input[type=checkbox]:checked +label{
+    background-color: var(--secondaryContainer);
+    color: var(--onSecondaryContainer);
+}
+
+/* Floating action button (surface) */
+.fab{
+    width: 55.2px;
+    height: 55.2px;
+    border-radius: 18.4px;
+    font-size: 13.8px;
+    padding: 0;
+    background-color: var(--surface);
+    box-shadow: 0 2px 5px var(--shadow);
+    color: var(--primary);
+}
+.fab:hover::before{
+    background-color: var(--onPrimaryContainerHover);
+    border-radius: 18.4px;
+}
+.fab:active::before{
+    background-color: var(--onPrimaryContainerPressed);
+}
+
+/* Extended FAB */
+.eFab{
+    border-radius: 18.4px;
+    height: 55.2px;
+    background-color: var(--primaryContainer);
+    color: var(--primary);
+    font-weight: 500;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+.eFab i{
+    margin-right: .5rem;
+    width: 18px;
+}
+.eFab:hover::before{
+    border-radius: 18.4px;
+    background-color: var(--onPrimaryContainerHover);
+}
+.eFab:active::before{
+    background-color: var(--onPrimaryContainerPressed);
+}
+
+/* ---------------------- Input ---------------- */
+.pure-material-textfield-outlined {
+    /* --primary: var(--primary); */
+    position: relative;
+    display: inline-block;
+    padding-top: 6px;
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+/* Input, Textarea */
+.pure-material-textfield-outlined > input,
+.pure-material-textfield-outlined > textarea {
+    box-sizing: border-box;
+    margin: 0;
+    border: solid 1px; /* Safari */
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-top-color: transparent;
+    border-radius: 4px;
+    padding: 15px 13px 15px;
+    width: 100%;
+    height: inherit;
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    background-color: transparent;
+    box-shadow: none; /* Firefox */
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    caret-color: var(--primary);
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+/* Span */
+.pure-material-textfield-outlined > input + span,
+.pure-material-textfield-outlined > textarea + span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    width: 100%;
+    max-height: 100%;
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    font-size: 75%;
+    line-height: 15px;
+    cursor: text;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+/* Corners */
+.pure-material-textfield-outlined > input + span::before,
+.pure-material-textfield-outlined > input + span::after,
+.pure-material-textfield-outlined > textarea + span::before,
+.pure-material-textfield-outlined > textarea + span::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    margin-top: 6px;
+    border-top: solid 1px;
+    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    min-width: 10px;
+    height: 8px;
+    pointer-events: none;
+    box-shadow: inset 0 1px transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pure-material-textfield-outlined > input + span::before,
+.pure-material-textfield-outlined > textarea + span::before {
+    margin-right: 4px;
+    border-left: solid 1px transparent;
+    border-radius: 4px 0;
+}
+
+.pure-material-textfield-outlined > input + span::after,
+.pure-material-textfield-outlined > textarea + span::after {
+    flex-grow: 1;
+    margin-left: 4px;
+    border-right: solid 1px transparent;
+    border-radius: 0 4px;
+}
+
+/* Hover */
+.pure-material-textfield-outlined:hover > input,
+.pure-material-textfield-outlined:hover > textarea {
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    border-top-color: transparent;
+}
+
+.pure-material-textfield-outlined:hover > input + span::before,
+.pure-material-textfield-outlined:hover > textarea + span::before,
+.pure-material-textfield-outlined:hover > input + span::after,
+.pure-material-textfield-outlined:hover > textarea + span::after {
+    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+}
+
+.pure-material-textfield-outlined:hover > input:not(:focus):placeholder-shown,
+.pure-material-textfield-outlined:hover > textarea:not(:focus):placeholder-shown {
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+}
+
+/* Placeholder-shown */
+.pure-material-textfield-outlined > input:not(:focus):placeholder-shown,
+.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown {
+    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+}
+
+.pure-material-textfield-outlined > input:not(:focus):placeholder-shown + span,
+.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown + span {
+    font-size: inherit;
+    line-height: 68px;
+}
+
+.pure-material-textfield-outlined > input:not(:focus):placeholder-shown + span::before,
+.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::before,
+.pure-material-textfield-outlined > input:not(:focus):placeholder-shown + span::after,
+.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::after {
+    border-top-color: transparent;
+}
+
+/* Focus */
+.pure-material-textfield-outlined > input:focus,
+.pure-material-textfield-outlined > textarea:focus {
+    border-color: var(--primary);
+    border-top-color: transparent;
+    box-shadow: inset 1px 0 var(--primary), inset -1px 0 var(--primary), inset 0 -1px var(--primary);
+    outline: none;
+}
+
+.pure-material-textfield-outlined > input:focus + span,
+.pure-material-textfield-outlined > textarea:focus + span {
+    color: var(--primary);
+}
+
+.pure-material-textfield-outlined > input:focus + span::before,
+.pure-material-textfield-outlined > input:focus + span::after,
+.pure-material-textfield-outlined > textarea:focus + span::before,
+.pure-material-textfield-outlined > textarea:focus + span::after {
+    border-top-color: var(--primary) !important;
+    box-shadow: inset 0 1px var(--primary);
+}
+
+/* Disabled */
+.pure-material-textfield-outlined > input:disabled,
+.pure-material-textfield-outlined > input:disabled + span,
+.pure-material-textfield-outlined > textarea:disabled,
+.pure-material-textfield-outlined > textarea:disabled + span {
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
+    border-top-color: transparent !important;
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+    pointer-events: none;
+}
+
+.pure-material-textfield-outlined > input:disabled + span::before,
+.pure-material-textfield-outlined > input:disabled + span::after,
+.pure-material-textfield-outlined > textarea:disabled + span::before,
+.pure-material-textfield-outlined > textarea:disabled + span::after {
+    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
+}
+
+.pure-material-textfield-outlined > input:disabled:placeholder-shown,
+.pure-material-textfield-outlined > input:disabled:placeholder-shown + span,
+.pure-material-textfield-outlined > textarea:disabled:placeholder-shown,
+.pure-material-textfield-outlined > textarea:disabled:placeholder-shown + span {
+    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
+}
+
+.pure-material-textfield-outlined > input:disabled:placeholder-shown + span::before,
+.pure-material-textfield-outlined > input:disabled:placeholder-shown + span::after,
+.pure-material-textfield-outlined > textarea:disabled:placeholder-shown + span::before,
+.pure-material-textfield-outlined > textarea:disabled:placeholder-shown + span::after {
+    border-top-color: transparent !important;
+}
+
+/* Faster transition in Safari for less noticable fractional font-size issue */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+        .pure-material-textfield-outlined > input,
+        .pure-material-textfield-outlined > input + span,
+        .pure-material-textfield-outlined > textarea,
+        .pure-material-textfield-outlined > textarea + span,
+        .pure-material-textfield-outlined > input + span::before,
+        .pure-material-textfield-outlined > input + span::after,
+        .pure-material-textfield-outlined > textarea + span::before,
+        .pure-material-textfield-outlined > textarea + span::after {
+            transition-duration: 0.1s;
+        }
+    }
+}
+

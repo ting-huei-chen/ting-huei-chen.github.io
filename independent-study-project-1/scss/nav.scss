@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+$base-color: #20262E;
+$medium-color: #4d5868;
+$light-color: #e9ebef;
+$radius:(
+    "small":5px,
+    "regular":15px,
+    "medium":2rem,
+    "round":50%
+);
+$font-weights:(
+    "light":300,
+    "regular":400,
+    "medium":500,
+    "bold":900
+);
+*{
+    // border: solid 1px red;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Roboto', Arial ,sans-serif;
+}
+html{
+    background-color: $light-color;
+}
+
+nav{
+    background-color: $base-color;
+    color: $light-color;
+    max-width: 30ch;
+    padding: 2rem 1rem;
+    border-radius: map-get($radius, regular);
+    height: 95vh;
+    
+}
+nav{
+    transition: all .5s ease-in-out;
+}
+.rail{
+    max-width: 4rem;
+}
+h2{
+    font-size: small;
+    font-weight: map-get($font-weights, light );
+}
+nav li,.menu-item{
+    list-style: none;
+    font-weight: map-get($font-weights, regular );
+    padding: 1rem;
+    font-size:smaller;
+    border-radius: map-get($radius, medium);
+    margin: .5rem 0;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+ul{
+    margin:0;
+}
+ul li{
+    margin: .1rem 0;
+    padding: .5rem;
+}
+.rail-item{
+    padding: 1rem .5rem;
+}
+nav li:hover,nav #menu:hover{
+    background-color: $medium-color;
+}
+nav li:active,nav #menu:active{
+    background-color: $light-color;
+    color: $base-color;
+}
+nav li .note{
+    float: right;
+    margin: 0 .5rem;
+    font-weight: map-get($font-weights, medium );
+}
+nav i{
+    margin: 0 .5rem 0 0rem;
+}
+.hidden{
+    display: none;
+}

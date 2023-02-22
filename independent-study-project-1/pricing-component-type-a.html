@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Component</title>
+    <link rel="stylesheet" href="/dist/css/pricing_a.min.css" />
+    <script
+      src="https://kit.fontawesome.com/e2110d24a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- logo -->
+      <h1>Liho</h1>
+      <nav>
+        <a href="">About</a>
+        <a href="">Service</a>
+        <a href="">Pricing</a>
+      </nav>
+      <div id="auth">
+        <a href="" class="btn btn-text">Log in</a>
+        <a href="" class="btn btn-primary">Sign up</a>
+      </div>
+      <div id="menu"><span></span><span></span><span></span></div>
+    </header>
+    <section id="overview">
+      <h2>Healthy meals, <br />delivered to your door</h2>
+      <p>
+        Get delicious, healthy meals delivered straight to your door with our
+        meal subscription service. Choose from our selection of customizable
+        plans to fit your dietary needs and preferences. With no commitment
+        required and free delivery, it's never been easier to eat healthy and
+        stay on track with your goals. Sign up today and take the first step
+        towards a healthier you!
+      </p>
+    </section>
+    <!-- payment toggle -->
+    <!-- pricing component card -->
+    <section>
+      <header>
+        <p>Monthly Billing</p>
+        <input type="checkbox" name="toggle" id="toggle" />
+        <label for="toggle"></label>
+        <p>Annual Billing</p>
+      </header>
+      <div id="pricing">
+        <div class="card">
+          <h3>Starter Plan</h3>
+
+          <p>
+            <span class="price"
+              >$<span id="starter-price" class="priceNum">9.99</span></span
+            >
+            <span>per <span class="cycle">month</span></span>
+          </p>
+          <p>Basic feature for up to 5 user</p>
+          <a href="" class="btn btn-primary">Choose this plan</a>
+          <a href="" class="btn btn-secondary">Chat with sales</a>
+          <hr />
+          <h4>Feature</h4>
+          <p>What's in the package</p>
+          <ul>
+            <li>Choice of 5 meals per week</li>
+            <li>Customizable dietary preferences</li>
+            <li>Free delivery</li>
+            <li>No commitment required</li>
+            <li>Cancel anytime</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Standard Plan<span class="text-label">Popular</span></h3>
+          <p>
+            <span class="price"
+              >$<span id="standard-price" class="priceNum">19.99</span></span
+            >
+            <span>per <span class="cycle">month</span></span>
+          </p>
+          <p>Basic feature for up to 5 user</p>
+          <a href="" class="btn btn-primary">Choose this plan</a>
+          <a href="" class="btn btn-secondary">Chat with sales</a>
+          <hr />
+          <h4>Feature</h4>
+          <p>What's in the package</p>
+          <ul>
+            <li>Choice of 10 meals per week</li>
+            <li>Customizable dietary preferences</li>
+            <li>Free delivery</li>
+            <li>No commitment required</li>
+            <li>Cancel anytime</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Premium Plan</h3>
+          <p>
+            <span class="price"
+              >$<span id="premium-price" class="priceNum">29.99</span></span
+            >
+            <span>per <span class="cycle">month</span></span>
+          </p>
+          <p>Basic feature for up to 5 user</p>
+          <a href="" class="btn btn-primary">Choose this plan</a>
+          <a href="" class="btn btn-secondary">Chat with sales</a>
+          <hr />
+          <h4>Feature</h4>
+          <p>What's in the package</p>
+          <ul>
+            <li>Choice of 15 meals per week</li>
+            <li>Customizable dietary preferences</li>
+            <li>Free delivery</li>
+            <li>No commitment required</li>
+            <li>Cancel anytime</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="pricing_a.js"></script>
+</html>

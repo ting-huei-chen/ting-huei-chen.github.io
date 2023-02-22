@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/dist/css/material.css" />
+    <link rel="stylesheet" href="/dist/css/login_a.css" />
+    <script
+      src="https://kit.fontawesome.com/e2110d24a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="flexcenter">
+    <form action="#">
+      <h1>Liho</h1>
+      <h2>Let's Get Started!</h2>
+      <p>
+        Register to create your first account and exploring the features in
+        Liho.
+      </p>
+      <div class="column">
+        <label class="pure-material-textfield-outlined">
+          <input placeholder=" " type="email" id="email" />
+          <span>Email</span>
+        </label>
+        <label class="pure-material-textfield-outlined">
+          <input placeholder=" " type="password" id="password" />
+          <span>Password</span>
+        </label>
+      </div>
+      <p class="msg msg-secondary hidden" id="error">
+        <i class="fa-solid fa-circle-exclamation"></i>Must be at least 8
+        characters
+      </p>
+      <h3>Select type of your account</h3>
+      <label for="business" class="account">
+        <input type="radio" name="account" id="business" />
+        <span class="checkmark"></span>
+        Business
+      </label>
+      <label for="personal" class="account">
+        <input type="radio" name="account" id="personal" />
+        <span class="checkmark"></span>
+        Personal
+      </label>
+      <input type="submit" value="Rigister" class="btn filled-btn" />
+      <hr />
+      <small>or register with</small>
+      <div class="flexcenter">
+        <button class="outlined-btn">
+          <i class="fa-brands fa-google"></i>Google
+        </button>
+        <button class="outlined-btn">
+          <i class="fa-brands fa-apple"></i>Apple ID
+        </button>
+      </div>
+      <p>
+        Already have account?
+        <a href="" class="btn text-btn btn-small inline">Login</a>
+      </p>
+    </form>
+    <script src="login.js"></script>
+  </body>
+</html>

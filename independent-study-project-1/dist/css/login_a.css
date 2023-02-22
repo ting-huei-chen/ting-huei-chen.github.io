@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+:root{
+    --base-color: #20262E;
+    --medium-color: #4d5868;
+    --theme-color:#5D3891;
+    --highlight-color:#8c3ff8;
+    --light-color: #e9ebef;
+    --breakpoint-tablet: 870px;
+    --narrow: 800px;
+    --breakpoint-laptop:1200px;
+    --radius-small:5px;
+    --radius-regular:15px;
+}
+*{
+    box-sizing: border-box;
+    /* outline: solid 1px coral; */
+}
+html,a{
+    font-family: 'Roboto',Arial, sans-serif;
+}
+h1{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 3rem;
+    margin: .75rem 0 .75rem 0;
+}
+h2{
+    margin: 1rem 0;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    background: var(--theme-color);
+    background: linear-gradient(352deg, var(--theme-color) 41%, var(--highlight-color) 70%);
+}
+h2,h3,small{
+    color: var(--base-color);
+}
+i{
+    margin-right: .5rem;
+}
+.flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    border-radius: var(--radius-regular);
+    padding: 1rem 8rem;
+    background-color: #fff;
+}
+form h1,form h2,form h3,form p,form small{
+    text-align: center;
+}
+form p{
+    font-size: small;
+    color: var(--medium-color);
+}
+form p:last-of-type{
+    margin: .5rem 0;
+}
+form small{
+    display: block;
+    width: 7rem;
+    margin-top: -1rem;
+    margin-inline: auto;
+    background-color: #fff;
+}
+form input[type=submit]{
+    margin: 1.75rem auto;
+    width: 100%;
+}
+form input[type=radio]{
+    display: none;
+}
+form label.account{
+    display: inline-block;
+    padding: .75rem 1rem;
+    border-radius: var(--radius-small);
+    /* margin-bottom: 1rem; */
+    width: 48%;
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+form label.account:first-of-type{
+    margin-right: .5rem;
+}
+form label.account:hover{
+    /* outline: solid 2px var(--theme-color); */
+    background-color: var(--light-color); 
+}
+.account:has(> input:checked){
+    outline: solid 2px var(--theme-color);
+    background-color: var(--light-color);
+    color: var(--primary);
+    font-weight: 500;
+}
+form .column label{
+    margin-top: .5rem;
+}
+
+form .outlined-btn{
+    margin-bottom: .5rem;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.inline{
+    display: inline-block;
+}
+.hidden{
+    display: none;
+}
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: .8rem;
+    left: .75rem;
+    height: 25px;
+    width: 25px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    transform: translateY(-0.3rem);
+} 
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the indicator (dot/circle) when checked */
+form input:checked ~ .checkmark:after {
+display: block;
+}
+form input:checked ~ .checkmark {
+    display: block;
+    background-color: var(--highlight-color);
+}
+  
+/* Style the indicator (dot/circle) */
+form .checkmark:after {
+    top: 6.5px;
+    left: 6.5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+}
+
+@media screen and (max-width:500px) {
+    form{
+        padding-inline: 1.25rem;
+        border-radius: 0;
+    }
+    form .flexcenter{
+        flex-direction: column;
+    }
+    form .flexcenter .outlined-btn{
+        width: 100%;
+        margin-top: .5rem;
+    }
+}
+

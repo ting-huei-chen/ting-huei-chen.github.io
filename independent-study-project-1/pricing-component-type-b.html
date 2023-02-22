@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive pricing component</title>
+    <link rel="stylesheet" href="dist/css/pricing_b.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Your writing assistant</h1>
+      <p>Sign-up for our 6000 words trial. No credit card required.</p>
+    </header>
+    <main>
+      <form action="#" method="get">
+        <div class="row">
+          <label for="slider"><span id="traffic">100K</span> Word counts</label>
+          <h2>
+            <mark>$<span id="price">16.00</span></mark> /month
+          </h2>
+          <input
+            type="range"
+            name="slider"
+            id="slider"
+            min="1"
+            max="5"
+            step="1"
+            class="slider slider-progress"
+          />
+        </div>
+        <div class="row">
+          <label for="toggle"> Monthly Billing</label>
+          <input type="checkbox" name="toggle" id="toggle" />
+          <label for="toggle" class="switch"></label>
+          <label for="toggle">Yearly Billing</label>
+          <p class="tag">25% discount</p>
+        </div>
+        <hr />
+        <div class="row">
+          <ul>
+            <li>Unlimited rephrase</li>
+            <li>Free grammar check</li>
+            <li>7/24 tech support</li>
+          </ul>
+          <input type="submit" value="Start my trial" />
+        </div>
+      </form>
+    </main>
+    <script src="pricing_b.js"></script>
+  </body>
+</html>

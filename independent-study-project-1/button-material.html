@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Buttons</title>
+    <link rel="stylesheet" href="/dist/css/material.css" />
+    <script
+      src="https://kit.fontawesome.com/e2110d24a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Material Design Buttons</h1>
+    <!-- Material Design includes nine types of buttons.
+        1. Elevated button
+        2. Filled button
+        3. Filled tonal button
+        4. Outlined button
+        5. Text button
+        6. Icon button
+        7. Segmented button
+        8. Floating action button (FAB)
+        9. Extended FAB -->
+    <div id="root">
+      <div class="group">
+        <button id="button1" class="elevated-btn">Elevated button</button>
+        <figcaption>Elevated button</figcaption>
+      </div>
+      <div class="group">
+        <button id="button2" class="filled-btn">Filled button</button>
+        <figcaption>Filled button</figcaption>
+      </div>
+      <div class="group">
+        <button id="button3" class="filled-tonal-btn">
+          Filled tonal button
+        </button>
+        <figcaption>Filled tonal button</figcaption>
+      </div>
+      <div class="group">
+        <button id="button4" class="outlined-btn">Outlined button</button>
+        <figcaption>Outlined button</figcaption>
+      </div>
+      <div class="group">
+        <button id="button5" class="text-btn">Text button</button>
+        <figcaption>Text button</figcaption>
+      </div>
+      <div class="group">
+        <button id="button6" class="icon">
+          <i class="fa-regular fa-clock"></i>
+        </button>
+        <figcaption>Icon button(Standard)</figcaption>
+      </div>
+      <div class="group">
+        <div class="segmentButton">
+          <input type="checkbox" name="segmentButton" id="segment1" />
+          <label for="segment1">enabled</label>
+          <input type="checkbox" name="segmentButton" id="segment2" />
+          <label for="segment2">enabled</label>
+          <input type="checkbox" name="segmentButton" id="segment3" />
+          <label for="segment3">enabled</label>
+        </div>
+        <figcaption>Segmented button</figcaption>
+      </div>
+      <div class="group">
+        <button id="button8" class="fab">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <figcaption>Floating action button</figcaption>
+      </div>
+      <div class="group">
+        <button id="button9" class="eFab">
+          <i class="fa-regular fa-clock"></i>Snoozed
+        </button>
+        <figcaption>Extended FAB</figcaption>
+      </div>
+    </div>
+  </body>
+</html>
