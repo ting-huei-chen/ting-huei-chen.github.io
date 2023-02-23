@@ -22,20 +22,21 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      body {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-      }
-      img {
-        width: auto;
-        height: 100%;
+      .carousel-indicators [data-bs-target] {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
       }
     </style>
   </head>
-  <body>
+  <body
+    class="d-flex row min-vh-100 m-0 justify-content-center align-items-center bg-dark-subtle"
+  >
     <noscript>Please enable Javascript in your browser.</noscript>
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide col-lg-6 col-md-10 col-sm-12"
+    >
       <div class="carousel-indicators">
         <button
           type="button"
@@ -57,33 +58,48 @@
           data-bs-slide-to="2"
           aria-label="Slide 3"
         ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
             src="assets/000030.JPG"
             alt="Two people riding carousel"
-            id="imageL"
             width="1818"
             height="1228"
+            class="img-fluid"
           />
         </div>
         <div class="carousel-item">
           <img
             src="assets/000022.JPG"
             alt="Five people taking photo with mascot"
-            id="image"
             width="1818"
             height="1228"
+            class="img-fluid"
           />
         </div>
         <div class="carousel-item">
           <img
             src="assets/000021.JPG"
             alt="Mini sky train"
-            id="imageR"
             width="1818"
             height="1228"
+            class="img-fluid"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/000026.JPG"
+            alt="People chasing each other"
+            width="1818"
+            height="1228"
+            class="img-fluid"
           />
         </div>
       </div>

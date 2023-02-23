@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+$base-color: #20262E;
+$medium-color: #4d5868;
+$theme-color:#5D3891;
+$highlight-color:#8c3ff8;
+$light-color: #e9ebef;
+$breakpoint-tablet: 870px;
+$narrow: 800px;
+$breakpoint-laptop:1200px;
+$colors:$theme-color,#E96479,#FFB84C,#183A1D,#3E54AC;
+$repeat:15;
+$radius:(
+    "small":5px,
+    "regular":15px,
+    "medium":2rem,
+    "round":50%
+);
+*{
+    box-sizing: border-box;
+}
+html,a,input{
+    font-family: 'Roboto',Arial, sans-serif;
+    color: $base-color;
+}
+body{
+    margin: 0;
+    background-color: $light-color;
+}
+body>header{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: .5rem 2rem;
+    background-color: #fff;
+    outline: solid 2px rgba($medium-color, 0.2);
+    h1{
+        font-family: 'Oleo Script Swash Caps', cursive;
+        color: $theme-color;
+        margin: 0;
+    }
+    p{
+        font-size: small;
+    }
+}
+.wrap{
+    display: flex;
+    justify-content: space-between;
+}
+#root,#selection{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+    min-height: 30ch;
+}
+#root{
+    padding: 2rem;
+    width: 100%;
+}
+.card{
+    position: relative;
+    // outline: solid 2px $light-color;
+    outline: solid 2px rgba($medium-color, 0.1);
+    // padding: 1rem;
+    // display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-between;
+    border-radius: map-get($map:$radius , $key:regular );
+    overflow: hidden;
+    cursor: default;
+    transition: all .5s ease-in;
+    min-height: 25ch;
+    background-color: #fff;
+    @for $i from 1 through $repeat {
+        &:nth-child(#{length($colors)}n+#{$i}) header {
+            background: lighten(nth($colors, random(length($colors))), 20%);
+            height: 4rem;
+        }
+    }
+    .cardbody{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        padding: .5rem 1rem 1rem 1rem;
+        
+        & h3{
+            margin: .5rem 0 0;
+            font-size: medium;
+        }
+        p{
+            font-size: small;
+            color: $medium-color;
+            margin-top: .3rem;
+        }
+    }
+    .row{
+        position: absolute;
+        bottom: 0;
+        padding: 0 1rem 1rem;
+        & label{
+            padding: .2rem .5rem;
+            transition: all .2s ease-in-out;
+            &:hover{
+                // outline: solid 2px $highlight-color;
+                border-radius: map-get($map: $radius, $key: small);
+                background-color: $light-color;
+                color: $highlight-color;
+                opacity: 0.6;
+                cursor: pointer;
+            }
+        }
+        & input[type=checkbox]{
+            display: none;
+        }
+        & input[type=checkbox]:checked+label{
+            color: $theme-color;
+            
+        }
+    }
+    &:hover{
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    // & header{
+    //     background-color: ;
+    // }
+
+}
+#selection{
+    outline: solid 2px rgba($medium-color, 0.2);
+    outline-style: dashed;
+    margin: 1rem;
+    border-radius: map-get($map: $radius, $key: regular);
+    width: 45ch;
+    padding: 1rem;
+    min-height: 80vh;
+}

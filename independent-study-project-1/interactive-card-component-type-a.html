@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Card Component</title>
+    <script
+      src="https://kit.fontawesome.com/e2110d24a9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="dist/css/card.min.css" />
+  </head>
+  <body>
+    <noscript>Please enable Javascript in your browser.</noscript>
+    <header>
+      <h1>Liho</h1>
+      <p>Meal plan board</p>
+    </header>
+    <div class="wrap">
+      <main
+        id="root"
+        ondrop="drop_handler(event)"
+        ondragover="dragover_handler(event)"
+      >
+        <!-- card 1 -->
+        <div
+          class="card"
+          id="card1"
+          draggable="true"
+          ondragstart="dragstart_handler(event)"
+        >
+          <header></header>
+          <div class="cardbody">
+            <h3>Vegan Lentil Soup</h3>
+            <p class="description">
+              lentils / onion / garlic / carrots / celery / vegetable broth /
+              cumin
+            </p>
+          </div>
+          <div class="row">
+            <input type="checkbox" name="card1" id="card1-love" />
+            <label for="card1-love"><i class="fa-regular fa-heart"></i></label>
+            <input type="checkbox" name="card1" id="card1-list" />
+            <label for="card1-list"
+              ><i class="fa-regular fa-bookmark"></i
+            ></label>
+            <input type="checkbox" name="card1" id="card1-tried" />
+            <label for="card1-tried"><i class="fa-regular fa-hand"></i></label>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div
+          class="card"
+          id="card2"
+          draggable="true"
+          ondragstart="dragstart_handler(event)"
+        >
+          <header></header>
+          <div class="cardbody">
+            <h3>Black bean burger</h3>
+            <p class="description">
+              black beans / onion / garlic / bread crumbs / chili powder / sweet
+              potatoes / buns
+            </p>
+          </div>
+          <div class="row">
+            <input type="checkbox" name="card2" id="card2-love" />
+            <label for="card2-love"><i class="fa-regular fa-heart"></i></label>
+            <input type="checkbox" name="card2" id="card2-list" />
+            <label for="card2-list"
+              ><i class="fa-regular fa-bookmark"></i
+            ></label>
+            <input type="checkbox" name="card2" id="card2-tried" />
+            <label for="card2-tried"><i class="fa-regular fa-hand"></i></label>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div
+          class="card"
+          id="card3"
+          draggable="true"
+          ondragstart="dragstart_handler(event)"
+        >
+          <header></header>
+          <div class="cardbody">
+            <h3>Vegan sushi rolls</h3>
+            <p class="description">
+              avocado / cucumber / carrots / nori / rice / wasabi / ginger
+            </p>
+          </div>
+          <div class="row">
+            <input type="checkbox" name="card3" id="card3-love" />
+            <label for="card3-love"><i class="fa-regular fa-heart"></i></label>
+            <input type="checkbox" name="card3" id="card3-list" />
+            <label for="card3-list"
+              ><i class="fa-regular fa-bookmark"></i
+            ></label>
+            <input type="checkbox" name="card1" id="card3-tried" />
+            <label for="card3-tried"><i class="fa-regular fa-hand"></i></label>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div
+          class="card"
+          id="card4"
+          draggable="true"
+          ondragstart="dragstart_handler(event)"
+        >
+          <header></header>
+          <div class="cardbody">
+            <h3>Turkey and Veggie Stir-Fry</h3>
+            <p class="description">
+              turkey / broccoli / carrots / snow peas / garlic / soy sauce olive
+              oil / pepper
+            </p>
+          </div>
+          <div class="row">
+            <input type="checkbox" name="card4" id="card4-love" />
+            <label for="card4-love"><i class="fa-regular fa-heart"></i></label>
+            <input type="checkbox" name="card4" id="card4-list" />
+            <label for="card4-list"
+              ><i class="fa-regular fa-bookmark"></i
+            ></label>
+            <input type="checkbox" name="card4" id="card4-tried" />
+            <label for="card4-tried"><i class="fa-regular fa-hand"></i></label>
+          </div>
+        </div>
+        <!-- card 5 -->
+        <div
+          class="card"
+          id="card5"
+          draggable="true"
+          ondragstart="dragstart_handler(event)"
+        >
+          <header></header>
+          <div class="cardbody">
+            <h3>Chickpea curry</h3>
+            <p class="description">
+              chickpeas / sweet potatoes / curry powder / garlic / ginger /
+              coconut milk / quinoa
+            </p>
+          </div>
+          <div class="row">
+            <input type="checkbox" name="card5" id="card5-love" />
+            <label for="card5-love"><i class="fa-regular fa-heart"></i></label>
+            <input type="checkbox" name="card5" id="card5-list" />
+            <label for="card5-list"
+              ><i class="fa-regular fa-bookmark"></i
+            ></label>
+            <input type="checkbox" name="card5" id="card5-tried" />
+            <label for="card5-tried"><i class="fa-regular fa-hand"></i></label>
+          </div>
+        </div>
+        <!-- card 6 -->
+        <div
+          class="card"
+          id="card6"
+          draggable="true"
+          ondragstart="dragstart_handler(event)"
+        >
+          <header></header>
+          <div class="cardbody">
+            <h3>Roasted vegetable and hummus wrap</h3>
+            <p class="description">
+              zucchini / eggplant / red bell pepper / hummus / tortilla wrap /
+              balsamic vinaigrette
+            </p>
+          </div>
+          <div class="row">
+            <input type="checkbox" name="card6" id="card6-love" />
+            <label for="card6-love"><i class="fa-regular fa-heart"></i></label>
+            <input type="checkbox" name="card6" id="card6-list" />
+            <label for="card6-list"
+              ><i class="fa-regular fa-bookmark"></i
+            ></label>
+            <input type="checkbox" name="card6" id="card6-tried" />
+            <label for="card6-tried"><i class="fa-regular fa-hand"></i></label>
+          </div>
+        </div>
+        <!-- card 7 -->
+        <div
+          class="card"
+          id="card6"
+          draggable="true"
+          ondragstart="dragstart_handler(event)"
+        >
+          <header></header>
+          <div class="cardbody">
+            <h3>Grilled Salmon with Quinoa Salad</h3>
+            <p class="description">
+              salmon / quinoa / cucumber red onion / red bell pepper / pepper
+            </p>
+          </div>
+          <div class="row">
+            <input type="checkbox" name="card7" id="card7-love" />
+            <label for="card6-love"><i class="fa-regular fa-heart"></i></label>
+            <input type="checkbox" name="card7" id="card7-list" />
+            <label for="card6-list"
+              ><i class="fa-regular fa-bookmark"></i
+            ></label>
+            <input type="checkbox" name="card7" id="card7-tried" />
+            <label for="card6-tried"><i class="fa-regular fa-hand"></i></label>
+          </div>
+        </div>
+      </main>
+      <aside
+        id="selection"
+        id="target"
+        ondrop="drop_handler(event)"
+        ondragover="dragover_handler(event)"
+      ></aside>
+    </div>
+    <script src="card.js"></script>
+  </body>
+</html>
