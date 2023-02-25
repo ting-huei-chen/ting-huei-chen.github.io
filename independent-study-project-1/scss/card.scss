@@ -51,7 +51,7 @@ body>header{
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-    grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(250px,1fr));
     min-height: 30ch;
 }
 #root{
@@ -60,12 +60,7 @@ body>header{
 }
 .card{
     position: relative;
-    // outline: solid 2px $light-color;
     outline: solid 2px rgba($medium-color, 0.1);
-    // padding: 1rem;
-    // display: flex;
-    //     flex-direction: column;
-    //     justify-content: space-between;
     border-radius: map-get($map:$radius , $key:regular );
     overflow: hidden;
     cursor: default;
@@ -114,16 +109,15 @@ body>header{
             display: none;
         }
         & input[type=checkbox]:checked+label{
-            color: $theme-color;
-            
+            color: $highlight-color;
+            & i.fa-regular{
+                font-weight: 900;
+            }
         }
     }
     &:hover{
         box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     }
-    // & header{
-    //     background-color: ;
-    // }
 
 }
 #selection{
@@ -134,4 +128,13 @@ body>header{
     width: 45ch;
     padding: 1rem;
     min-height: 80vh;
+}
+@media (max-width: $breakpoint-tablet) {
+    .wrap{
+        flex-direction: column-reverse;
+    }
+    #selection{
+        min-height: unset;
+        width: 100%;
+    }
 }
