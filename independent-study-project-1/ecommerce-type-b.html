@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/eccomerce_b.css" />
+    <script
+      src="https://kit.fontawesome.com/e2110d24a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <i id="menu">MENU</i>
+      <nav>
+        <a href="#">Product</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+      </nav>
+      <h1>Liho</h1>
+      <div class="group">
+        <i id="cartToggle">Cart<span id="count"></span></i>
+        <div id="cart" class="hidden">
+          <div class="group">
+            <h3>Cart</h3>
+            <i>CLOSE</i>
+          </div>
+          <div class="col">
+            <ul id="cartItems"></ul>
+            <div class="group">
+              <h4>Total</h4>
+              <span id="total">0</span>
+            </div>
+          </div>
+          <a href="#" class="btn">Checkout</a>
+        </div>
+        <i>Account</i>
+      </div>
+    </header>
+    <main>
+      <div class="product-img">
+        <img
+          src="./assets/product.png"
+          alt="Bentley watch"
+          width="1000"
+          height="961"
+        />
+      </div>
+      <section id="product">
+        <h2>A Watch</h2>
+        <p>$ <span id="price">250</span></p>
+        <p id="description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+          nihil ipsa amet saepe expedita placeat dolor.Aliquam nihil ipsa amet
+          saepe expedita placeat dolor.
+        </p>
+        <form action="#">
+          <div class="group">
+            <input type="radio" name="type" id="lite" value="lite" />
+            <label for="lite">Lite</label>
+            <input type="radio" name="type" id="standard" value="standard" />
+            <label for="standard">Standard</label>
+            <input type="radio" name="type" id="premium" value="premium" />
+            <label for="premium">Premium</label>
+          </div>
+          <div class="group">
+            <label for="num">Amount</label>
+            <label for="num" id="minus"
+              ><i class="fa-solid fa-minus"></i
+            ></label>
+            <input
+              type="number"
+              name="num"
+              id="num"
+              value="1"
+              min="1"
+              max="5"
+            />
+            <label for="num" id="plus"><i class="fa-solid fa-plus"></i></label>
+          </div>
+          <input type="submit" value="Add to Cart" id="addCart" />
+        </form>
+      </section>
+    </main>
+    <script src="ecommerce_b.js"></script>
+  </body>
+</html>
