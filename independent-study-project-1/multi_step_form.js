@@ -1,7 +1,6 @@
 initMultiStepForm();
 
 function initMultiStepForm() {
-    const progressNumber = document.querySelectorAll(".step").length;
     const slidePage = document.querySelector(".slide-page");
     const submitBtn = document.querySelector(".submit");
     const progressText = document.querySelectorAll(".step p");
@@ -23,7 +22,6 @@ function initMultiStepForm() {
             event.preventDefault();
 
             inputsValid = validateInputs(this);
-            // inputsValid = true;
 
             if (inputsValid) {
                 slidePage.style.marginLeft = `-${
@@ -61,26 +59,37 @@ function initMultiStepForm() {
         
     });
 
-    function validateInputs(ths) {
-        let inputsValid = true;
+   /**
+ * Validates the input elements within the given form element.
+ * Returns true if all input elements are valid; otherwise false.
+ */
+function validateInputs(form) {
+  // Initialize the inputsValid flag to true.
+  const inputsValid = true;
 
-        const inputs =
-            ths.parentElement.parentElement.querySelectorAll("input");
-        for (let i = 0; i < inputs.length; i++) {
-            const check =inputs[i].getAttribute("name");
-            const valid = inputs[i].checkValidity();
-            if(check==="diet" ||check==="allergies" || check ==="preference"){
-                
-                ths.parentElement.parentElement.querySelector("input:checked") === null ? inputsValid=false :  inputsValid=true;
-            }
-            if (!valid) {
-                inputsValid = false;
-                inputs[i].classList.add("invalid-input");
-            } else {
-                inputs[i].classList.remove("invalid-input");
-            }
-        }
+  // Get an array of all input elements within the form.
+  const inputs = [...form.querySelectorAll("input")];
 
-        return inputsValid;
+  // Iterate over each input element and validate its value.
+  for (const input of inputs) {
+    // Get the name attribute of the input element.
+    const name = input.getAttribute("name");
+
+    // Check if the input element is valid.
+    const isValid = input.checkValidity();
+
+    // If the input element is one of the special inputs (diet, allergies, preference),
+    // check if at least one option has been checked.
+    if (name === "diet" || name === "allergies" || name === "preference") {
+      const isChecked = form.querySelector(`input[name="${name}"]:checked`) !== null;
+      inputsValid = inputsValid && isChecked;
     }
+
+    // Toggle the 'invalid-input' class on the input element based on its validity.
+    input.classList.toggle("invalid-input", !isValid);
+  }
+
+  // Return the final value of the inputsValid flag.
+  return inputsValid;
+}
 }
