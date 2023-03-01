@@ -1,6 +1,5 @@
-initMultiStepForm();
 
-function initMultiStepForm() {
+
     const slidePage = document.querySelector(".slide-page");
     const submitBtn = document.querySelector(".submit");
     const progressText = document.querySelectorAll(".step p");
@@ -91,5 +90,4 @@ function validateInputs(form) {
 
   // Return the final value of the inputsValid flag.
   return inputsValid;
-}
 }

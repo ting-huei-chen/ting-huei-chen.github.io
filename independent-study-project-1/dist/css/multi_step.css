@@ -7,7 +7,7 @@
 :root {
     --primary: #183A1D;
     --secondary: #698269;
-    --errorColor: red;
+    --errorColor: rgb(244, 94, 94);
     --stepNumber: 6;
     --containerWidth: 600px;
     --bgColor: #183A1D;
@@ -115,12 +115,12 @@ form .page .field select {
     font-size: 17px;
     font-weight: 500;
 }
-form .page .field button {
+form .page .field button,form .page .field input[type=submit] {
     width: 100%;
     height: calc(100% + 5px);
     border: none;
     background: var(--primary);
-    /* margin-top: -20px; */
+    margin-top: -20px;
     border-radius: 2rem;
     color: #fff;
     cursor: pointer;

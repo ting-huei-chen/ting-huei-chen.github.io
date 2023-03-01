@@ -51,6 +51,8 @@ h2,h3,.btn,#thankYou p, .attribution, .message, .opt{
 }
 a{
     color: var(--darkGreen);
+    margin: 0 auto;
+    display: block;
 }
 input[type=radio]{
     opacity: 0;
